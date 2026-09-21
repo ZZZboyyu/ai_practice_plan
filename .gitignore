@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.log
+*.db
+*.db-*
+.env
+.env.*
+!.env.example
+uploads/
+backups/
+tmp/
+scan-page-*.png

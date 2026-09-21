@@ -4,6 +4,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.pool import StaticPool
 
 import app
+import document_storage
 from models import Base
 
 
@@ -13,6 +14,11 @@ TEST_ENGINE = create_engine(
     poolclass=StaticPool,
 )
 TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=TEST_ENGINE)
+
+
+@pytest.fixture(autouse=True)
+def isolate_uploads(tmp_path, monkeypatch):
+    monkeypatch.setattr(document_storage, "UPLOAD_DIR", tmp_path / "uploads")
 
 
 @pytest.fixture(autouse=True)

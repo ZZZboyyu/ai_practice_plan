@@ -8,3 +8,8 @@ __pycache__/
 tasks.json
 .env
 .env.*
+!.env.example
+uploads/
+backups/
+tmp/
+scan-page-*.png

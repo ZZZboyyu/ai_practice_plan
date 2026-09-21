@@ -1,0 +1,7 @@
+fastapi==0.141.1
+uvicorn[standard]==0.52.4
+sqlalchemy==2.0.52
+python-multipart
+pypdf
+rapidocr-onnxruntime==1.4.4
+pypdfium2==5.13.0

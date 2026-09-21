@@ -1,8 +1,10 @@
 from sqlalchemy import create_engine
+from sqlalchemy.engine import URL
+from config import DB_FILE
 from models import Base
 from sqlalchemy.orm import sessionmaker
 
-DATABASE_URL = "sqlite:///./tasks.db"
+DATABASE_URL = URL.create("sqlite", database=str(DB_FILE))
 
 
 

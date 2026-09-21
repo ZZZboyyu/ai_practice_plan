@@ -3,7 +3,7 @@ import json
 from config import DATA_FILE
 def load_tasks():
     if not DATA_FILE.exists():
-
+        
             return[]
     try:
         with DATA_FILE.open("r", encoding="utf-8") as file:
